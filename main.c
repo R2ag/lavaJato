@@ -3,8 +3,7 @@
 	Elabore um programa em C que armazene em arquivo binário os dados dos
 	funcionários da empresa Lava Autos.
  	Este programa deve permitir ao usuário:
-		-> cadastrar novos funcionários; (implementado!)
-		-> alterar dados dos registros no arquivo; (implementado!)
+
 		-> pesquisar, por nome, se um funcionário está cadastrado; (implementado! MAS VOCÊ VAI MELHORÁ-LO :) )
 		-> excluir o registro de um funcionário; (implementado, mas vamos pensar! :) )
 		-> excluir o arquivo fisicamente. (VOCÊ VAI IMPLEMENTAR! :) )
@@ -22,7 +21,6 @@
 
 int main(int argc, char const *argv[]) {
   int opcaoMenu, resp, pos;
-  FILE *pkt;
 	// Laço que mantém o programa em execução, com opções de menu para o usuário.
 	do{
 		// Imprime o menu na tela e lê a opção escolhida pelo usuário.
@@ -32,6 +30,7 @@ int main(int argc, char const *argv[]) {
 		switch(opcaoMenu){
 			// Cadastra um funcionário.
 			case 1:
+        backupSeguranca();
 				resp = cadastraFunc();
 
 				// Verifica se o arquivo foi aberto corretamente.
@@ -45,6 +44,7 @@ int main(int argc, char const *argv[]) {
 
 			// Altera dados de um funcionário.
 			case 2:
+        backupSeguranca();
 				pos = pesquisaFunc();
 				// Verifica se o arquivo foi aberto corretamente.
 				if (pos >= 0){
@@ -61,8 +61,7 @@ int main(int argc, char const *argv[]) {
 
 			// Exclui dados de um funcionário.
 			case 3:
-				//pkt = abrirArquivo("rb");
-				bakupSeguranca(pkt);
+				backupSeguranca();
 				pos = pesquisaFunc();
 				// Verifica se o arquivo foi aberto corretamente.
 				if (pos >= 0){
@@ -108,6 +107,7 @@ int main(int argc, char const *argv[]) {
 
 			// Apaga fisicamente o arquivo.
 			case 6:
+        backupSeguranca();
 				printf("\n\tEm desenvolvimento....  Voce vai desenvolver! :-)\n\n");
 			break;
 

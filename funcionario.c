@@ -10,6 +10,9 @@
 
 
 int cadastraFunc(){
+
+	//Criação de um backup de segurança
+	
 	// Declaração da variável do tipo registro.
 	dados func;
 
@@ -18,9 +21,9 @@ int cadastraFunc(){
 
 	// Define o modo de abertura do arquivo.
 	char modo[] = "a+b";
-
+	char nomeArquivo[] = "funcionarios.dat"
 	// Abre o arquivo binário para leitura e gravação.
-	fp = openFile(modo);
+	fp = openFile(nomeArquivo, modo);
 
 	// Verifica se o arquivo foi aberto corretamente. Caso negativo, sai da função.
 	if(fp == NULL){

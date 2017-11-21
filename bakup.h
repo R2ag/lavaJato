@@ -1,6 +1,6 @@
-#ifndef BAKUP_HEADER
-#define  BAKUP_HEADER
+#ifndef BACKUP_HEADER
+#define  BACKUP_HEADER
 
-void bakupSeguranca();
+void backupSeguranca();
 
 #endif

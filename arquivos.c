@@ -9,7 +9,7 @@
 #include "menu.h"
 
 
-FILE *openFile(char *modo){
-  FILE *fp = fopen("funcionarios.dat", modo);
+FILE *openFile(char *nameArquivo, char *modo){
+  FILE *fp = fopen(nameArquivo, modo);
     return fp;
 }
