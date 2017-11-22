@@ -8,7 +8,12 @@
 #include "menu.h"
 
 //Ps: Falta criar um modo de nomear o arquivo com a data e hora da criação do backup
+/*A função backup funciona copiando os dados presentes no arquivo original para o arquivo
+de backup. A função abre o arquivo original em modo de leitura, cria o arquivo copia e vai
+percorrendo dado por dado e salvando em uma variavel auxiliar temporario.
 
+ Criar função pra recuperar backup
+*/
 void backupSeguranca(){
     dados bkpBuffer; //Variavel auxiliar utilizada para armazenar temporariamente os dados lidos do arquivo original
 

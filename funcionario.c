@@ -11,8 +11,6 @@
 
 int cadastraFunc(){
 
-	//Criação de um backup de segurança
-	
 	// Declaração da variável do tipo registro.
 	dados func;
 
@@ -75,9 +73,10 @@ int imprimeFunc(){
 
 	// Define o modo de abertura do arquivo.
 	char modo[] = "rb";
+	char nomeArquivo[] = "funcionarios.dat"
 
-	// Abre o arquivo binário para leitura.
-	fp = openFile(modo);
+	// Abre o arquivo binário para leitura e gravação.
+	fp = openFile(nomeArquivo, modo);
 
 	// Verifica se o arquivo foi aberto corretamente. Caso negativo, sai da função.
 	if(fp == NULL){
@@ -122,9 +121,9 @@ int pesquisaFunc(){
 
 	// Define o modo de abertura do arquivo.
 	char modo[] = "rb";
-
-	// Abre o arquivo binário para leitura.
-	fp = openFile(modo);
+	char nomeArquivo[] = "funcionarios.dat"
+	// Abre o arquivo binário para leitura e gravação.
+	fp = openFile(nomeArquivo, modo);
 
 	// Verifica se o arquivo foi aberto corretamente. Caso negativo, sai da função.
 	if(fp == NULL){
@@ -171,9 +170,10 @@ void consultaFunc(int posRegFunc){
 
 	// Define o modo de abertura do arquivo.
 	char modo[] = "r+b";
+	char nomeArquivo[] = "funcionarios.dat"
 
-	// Abre o arquivo binário para leitura.
-	fp = openFile(modo);
+	// Abre o arquivo binário para leitura e gravação.
+	fp = openFile(nomeArquivo, modo);
 
 	// Acessa o registro específico, com base na posição recebida pela função.
 	fseek(fp, posRegFunc * sizeof(func), SEEK_SET);
@@ -202,9 +202,10 @@ void alteraFunc(int posRegFunc){
 
 	// Define o modo de abertura do arquivo.
 	char modo[] = "r+b";
+	char nomeArquivo[] = "funcionarios.dat"
 
-	// Abre o arquivo binário para leitura e escrita.
-	fp = openFile(modo);
+	// Abre o arquivo binário para leitura e gravação.
+	fp = openFile(nomeArquivo, modo);
 
 	// Acessa o registro específico, com base na posição recebida pela função.
 	fseek(fp, posRegFunc * sizeof(func), SEEK_SET);
@@ -281,9 +282,10 @@ void excluiFunc(int posRegFunc){
 
 	// Define o modo de abertura do arquivo.
 	char modo[] = "r+b";
+	char nomeArquivo[] = "funcionarios.dat"
 
-	// Abre o arquivo binário para leitura e escrita.
-	fp = openFile(modo);
+	// Abre o arquivo binário para leitura e gravação.
+	fp = openFile(nomeArquivo, modo);
 
 	// Acessa o registro específico, com base na posição recebida pela função.
 	fseek(fp, posRegFunc * sizeof(func), SEEK_SET);
