@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+//Declaração da estrutura de dados referente ao cadastro dos funcionarios
 typedef struct Dados{
 	int matricula;
 	int status;
@@ -12,9 +13,10 @@ typedef struct Dados{
 	float salario;
 }dados;
 
+//Declaração da estrutura de dados referente ao cadastro dos usuarios do sistema
 typedef struct Usuario {
 	char login[16];
 	char senha[16];
-	char tipoUsuario;
+	int  nivelAcesso;
 }usuario;
 #endif

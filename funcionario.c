@@ -7,6 +7,8 @@
 #include "tipoDados.h"
 #include "funcionario.h"
 #include "menu.h"
+#include "autenticacao.h"
+
 
 
 int cadastraFunc(){
@@ -19,7 +21,7 @@ int cadastraFunc(){
 
 	// Define o modo de abertura do arquivo.
 	char modo[] = "a+b";
-	char nomeArquivo[] = "funcionarios.dat"
+	char nomeArquivo[] = "funcionarios.dat";
 	// Abre o arquivo binário para leitura e gravação.
 	fp = openFile(nomeArquivo, modo);
 
@@ -73,7 +75,7 @@ int imprimeFunc(){
 
 	// Define o modo de abertura do arquivo.
 	char modo[] = "rb";
-	char nomeArquivo[] = "funcionarios.dat"
+	char nomeArquivo[] = "funcionarios.dat";
 
 	// Abre o arquivo binário para leitura e gravação.
 	fp = openFile(nomeArquivo, modo);
@@ -121,7 +123,7 @@ int pesquisaFunc(){
 
 	// Define o modo de abertura do arquivo.
 	char modo[] = "rb";
-	char nomeArquivo[] = "funcionarios.dat"
+	char nomeArquivo[] = "funcionarios.dat";
 	// Abre o arquivo binário para leitura e gravação.
 	fp = openFile(nomeArquivo, modo);
 
@@ -170,7 +172,7 @@ void consultaFunc(int posRegFunc){
 
 	// Define o modo de abertura do arquivo.
 	char modo[] = "r+b";
-	char nomeArquivo[] = "funcionarios.dat"
+	char nomeArquivo[] = "funcionarios.dat";
 
 	// Abre o arquivo binário para leitura e gravação.
 	fp = openFile(nomeArquivo, modo);
@@ -202,7 +204,7 @@ void alteraFunc(int posRegFunc){
 
 	// Define o modo de abertura do arquivo.
 	char modo[] = "r+b";
-	char nomeArquivo[] = "funcionarios.dat"
+	char nomeArquivo[] = "funcionarios.dat";
 
 	// Abre o arquivo binário para leitura e gravação.
 	fp = openFile(nomeArquivo, modo);
@@ -282,7 +284,7 @@ void excluiFunc(int posRegFunc){
 
 	// Define o modo de abertura do arquivo.
 	char modo[] = "r+b";
-	char nomeArquivo[] = "funcionarios.dat"
+	char nomeArquivo[] = "funcionarios.dat";
 
 	// Abre o arquivo binário para leitura e gravação.
 	fp = openFile(nomeArquivo, modo);
